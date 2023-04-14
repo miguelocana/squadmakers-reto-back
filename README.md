@@ -12,7 +12,7 @@ cd squadmasters-test
 
 From here, you can either set up the project manually or using Docker.
 
-### Manual setup
+### OPTION 1 - Manual setup
 To run this project manually, follow these steps:
 
 1. Install the required Python packages using pip:
@@ -30,7 +30,7 @@ python manage.py runserver
 4. Access the web API by visiting http://localhost:8000/swagger/ in your web browser.
 
 
-### Docker setup
+### OPTION 2 - Docker setup
 To run this project using Docker, follow these steps:
 
 1. Install Docker and Docker Compose.
