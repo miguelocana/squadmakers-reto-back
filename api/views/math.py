@@ -22,6 +22,10 @@ class MathViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
 
         if 'numbers' in request.query_params:
             numbers: list = request.GET.getlist('numbers')
+
+            if len(numbers) == 1 and isinstance(numbers[0], str):
+                numbers = numbers[0].split(',')
+
             self.validate_numbers(numbers)
             result = self.get_least_common_multiple(numbers)
 
