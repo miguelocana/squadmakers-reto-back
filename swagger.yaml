@@ -1,0 +1,142 @@
+swagger: '2.0'
+info:
+  title: Snippets API
+  termsOfService: https://www.google.com/policies/terms/
+  version: v1
+host: 127.0.0.1:8000
+schemes:
+  - http
+basePath: /api/v1
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  Basic:
+    type: basic
+security:
+  - Basic: []
+paths:
+  /jokes/:
+    get:
+      operationId: jokes_list
+      description: ''
+      parameters:
+        - name: param
+          in: query
+          description: Do you want a Chuck or a Dad joke?
+          type: string
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Joke'
+      tags:
+        - jokes
+    post:
+      operationId: jokes_create
+      description: ''
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Joke'
+      responses:
+        '201':
+          description: ''
+          schema:
+            $ref: '#/definitions/Joke'
+      tags:
+        - jokes
+    parameters: []
+  /jokes/{id}/:
+    put:
+      operationId: jokes_update
+      description: ''
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Joke'
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Joke'
+      tags:
+        - jokes
+    patch:
+      operationId: jokes_partial_update
+      description: ''
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Joke'
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Joke'
+      tags:
+        - jokes
+    delete:
+      operationId: jokes_delete
+      description: ''
+      parameters: []
+      responses:
+        '204':
+          description: ''
+      tags:
+        - jokes
+    parameters:
+      - name: id
+        in: path
+        description: A unique integer value identifying this joke.
+        required: true
+        type: integer
+  /math/:
+    get:
+      operationId: math_list
+      description: ''
+      parameters:
+        - name: number
+          in: query
+          description: Integer or digit string.
+          type: string
+        - name: numbers
+          in: query
+          description: List of integers or digit strings.
+          type: array
+          items:
+            type: integer
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: array
+            items:
+              type: object
+              properties: {}
+      tags:
+        - math
+    parameters: []
+definitions:
+  Joke:
+    required:
+      - joke
+    type: object
+    properties:
+      id:
+        title: Id
+        type: integer
+        readOnly: true
+      joke:
+        title: Joke
+        type: string
+        minLength: 1
