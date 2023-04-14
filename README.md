@@ -1,4 +1,7 @@
 # Squadmasters API test
+Hello! This is a Django project that implements a web API for generate jokes and calculate math operations.
+
+The service generate automatically a view to [Swagger UI](https://swagger.io/), where you can test the API.
 
 ## Setup 
 To set up this project, follow these steps:
@@ -27,8 +30,6 @@ python manage.py migrate
 ```bash
 python manage.py runserver
 ```
-4. Access the web API by visiting http://localhost:8000/swagger/ in your web browser.
-
 
 ### OPTION 2 - Docker setup
 To run this project using Docker, follow these steps:
@@ -39,16 +40,15 @@ To run this project using Docker, follow these steps:
 ```bash
 docker compose up --build
 ```
-3. Access the web application by visiting http://localhost:8000/swagger/ in your web browser.
 
 The Docker container will automatically set up the environment and dependencies for the project. Any changes to the code will be reflected in the running container immediately.
 
+## Swagger UI
+You're all set up to access to the API documentation by visiting http://localhost:8000/swagger/ in your web browser. Additionally, you'll find a `swagger.yaml` file in the root directory of the project.
 ## Tests
-To run the tests, run this command:
+Tests are implemented using [pytest](https://docs.pytest.org/en/stable/). To run the tests, run this command:
 ```bash
 docker compose run test
 ```
 You'll see the test results in the terminal.
 
-# Conclusion
-That's it! You now know how to set up and run this Django project manually or using Docker. Enjoy!
