@@ -46,9 +46,9 @@ The Docker container will automatically set up the environment and dependencies 
 ## Swagger UI
 You're all set up to access to the API documentation by visiting http://localhost:8000/swagger/ in your web browser. Additionally, you'll find a `swagger.yaml` file in the root directory of the project.
 ## Tests
-Tests are implemented using [pytest](https://docs.pytest.org/en/stable/). To run the tests, run this command:
+Tests are implemented using [pytest](https://docs.pytest.org/en/stable/). Run this command:
 ```bash
 docker compose run test
 ```
-You'll see the test results in the terminal.
+You'll see the results in the terminal.
 
