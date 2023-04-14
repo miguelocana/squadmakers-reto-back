@@ -37,11 +37,18 @@ To run this project using Docker, follow these steps:
 
 2. Build the Docker image and start the containers::
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 3. Access the web application by visiting http://localhost:8000/swagger/ in your web browser.
 
 The Docker container will automatically set up the environment and dependencies for the project. Any changes to the code will be reflected in the running container immediately.
+
+## Tests
+To run the tests, run this command:
+```bash
+docker compose run test
+```
+You'll see the test results in the terminal.
 
 # Conclusion
 That's it! You now know how to set up and run this Django project manually or using Docker. Enjoy!
