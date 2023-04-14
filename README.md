@@ -9,8 +9,8 @@ To set up this project, follow these steps:
 1. Install Python 3.6 or higher.
 2. Clone this repository to your local machine and go to the project directory.
 ```bash
-git clone https://github.com/miguelocana/squadmasters-test.git
-cd squadmasters-test
+git clone https://github.com/miguelocana/squadmakers-reto-back.git
+cd squadmakers-reto-back
 ```
 
 From here, you can either set up the project manually or using Docker.
